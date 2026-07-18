@@ -1,4 +1,4 @@
-# ai-admin-frontend · 规格事实源（SPECS）
+# ai-admin-frontend · Specifications Source of Truth (SPECS)
 
 > **auto-generated from `design/DESIGN.md`** — concrete specifications for route table, build pipeline, and API contracts. These are the single source of truth for implementation.
 

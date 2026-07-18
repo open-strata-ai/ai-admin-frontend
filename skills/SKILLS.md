@@ -1,4 +1,4 @@
-# ai-admin-frontend · 编码规则（SKILLS）
+# ai-admin-frontend · Encoding rules (SKILLS)
 
 > **auto-generated from `design/DESIGN.md`** — concrete coding rules for AI agents working on this repository. Each rule is actionable and testable.
 
