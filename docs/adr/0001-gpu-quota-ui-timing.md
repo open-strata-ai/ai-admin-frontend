@@ -1,15 +1,15 @@
-# ADR-0005: Audit retrieval scale
+# ADR-0001: GPU quota UI timing
 
-- **Status**: Pending (Open)
+- **Status**: Pending Alignment
 - **Date**: 2026-07-17
 - **Suggested by**: OpenStrata Architecture Group
 - **Repository**: ai-admin-frontend
-- **Source**: `design/DESIGN.md` §11 Open Issue
+- **Source**: `docs/DESIGN.md` §11 Open Issue
 - **Association**: (within this repository)
 
 ##Context
 
-When the amount of audit logs is large, does the front end need server-side paging + time range pre-aggregation (to avoid full pull)? ---
+When self-hosting is not enabled in phase three, should the GPU view be completely hidden or displayed as a "capacity planning placeholder"? Requires alignment with §14.4 D-level note.
 
 ## Decision Options (Options Considered)
 
@@ -19,7 +19,7 @@ When the amount of audit logs is large, does the front end need server-side pagi
 
 ## Recommended decision (Decision)
 
-This ADR solidifies the "audit search scale" into an architectural decision record and incorporates it into `design/adr/` for continuous tracking. This issue stems from the `design/DESIGN.md` §11 open issue and is still open.
+This ADR solidifies "GPU quota UI timing" into an architectural decision record and incorporates it into `docs/adr/` for continuous tracking. This issue stems from the `docs/DESIGN.md` §11 open issue and is still open.
 
 **Conservative Default Principle**: Before the final decision is made, the "minimum available + explicit configuration switch" shall prevail, maintain the current behavior, and not destroy the existing contract and cross-repository SPI interface; this ADR status will be written back after review by the relevant team.
 
@@ -27,9 +27,10 @@ This ADR solidifies the "audit search scale" into an architectural decision reco
 
 ## To be aligned / Follow-ups (Follow-ups)
 
+- Associated architecture documents §14.4 (as a basis for decision-making and a source of consistency verification).
 - Solidify the decision before the review at the corresponding stage, and write the final conclusion back into this ADR (the status is changed from "Pending" to "Adopted").
 
 ## Traceback
 
-- Upstream design: `design/DESIGN.md` §11 Open issue
-- Relevance index: see `design/adr/README.md`
+- Upstream design: `docs/DESIGN.md` §11 Open issue
+- Relevance index: see `docs/adr/README.md`

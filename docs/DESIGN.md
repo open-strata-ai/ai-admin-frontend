@@ -13,7 +13,7 @@
 | **Platform version** | v1.0.0 |
 | **Document Status** | Draft (draft) |
 | **Responsible Person** | OpenStrata Architecture Group |
-| **Affiliated links** | This repository [arch/ARCH.md](./../arch/ARCH.md) · [skills/SKILLS.md](./../skills/SKILLS.md) · [specs/SPECS.md](./../specs/SPECS.md); Architecture Document §14 (Management Portal), §8 (Multi-tenancy), §4.7.3 (Authentication and Authorization/RBAC), §15.5 (Java backend DDD, corresponding to `ai-admin-service`) |
+| **Affiliated links** | This repository [docs/ARCH.md](./ARCH.md) · [docs/SKILLS.md](./SKILLS.md) · [docs/SPECS.md](./SPECS.md); Architecture Document §14 (Management Portal), §8 (Multi-tenancy), §4.7.3 (Authentication and Authorization/RBAC), §15.5 (Java backend DDD, corresponding to `ai-admin-service`) |
 
 ---
 

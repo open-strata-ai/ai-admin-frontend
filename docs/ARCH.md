@@ -1,6 +1,6 @@
 # ai-admin-frontend · Architecture fact source (ARCH)
 
-> **auto-generated from `design/DESIGN.md`** — AI coding ground truth for architecture decisions, persona mapping, route structure, and critical UX flows. Edit DESIGN.md to propagate changes.
+> **auto-generated from `docs/DESIGN.md`** — AI coding ground truth for architecture decisions, persona mapping, route structure, and critical UX flows. Edit DESIGN.md to propagate changes.
 
 ---
 
