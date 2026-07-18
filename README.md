@@ -5,7 +5,7 @@
 - **Language**: TypeScript (primary framework: React 18 + Vite + Ant Design (ui-kit also includes Storybook/Rollup))
 - **domain**: frontend
 - **OPTIONAL**: core
-- **Meta repository reference**: `openstrata-meta/repos.yaml` (tag `v1.4.0`) · BOM see `openstrata-meta/bom.yaml`
+- **Meta repository reference**: `openstrata-meta/repos.yaml` (tag `v1.0.0`) · BOM see `openstrata-meta/bom.yaml`
 
 ## Repository unified structure (§15.6.2)
 

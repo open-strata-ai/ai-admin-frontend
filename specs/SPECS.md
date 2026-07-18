@@ -142,7 +142,7 @@ VITE_PROFILE_TIER=advanced              # gates GPU views
 replicaCount: 2
 image:
   repository: registry.example.com/ai-admin-frontend
-  tag: "v1.4.0"
+  tag: "v1.0.0"
 ingress:
   enabled: true
   host: admin.openstrata.example.com
@@ -161,7 +161,7 @@ configmap:
 | advanced | yes | no (capacity planning placeholder) |
 | full | yes | yes (full GPU governance) |
 
-> `repos.yaml` pins `ai-admin-frontend@v1.4.0`. All profiles include this repo; GPU features are toggled by `VITE_PROFILE_TIER` at build time.
+> `repos.yaml` pins `ai-admin-frontend@v1.0.0`. All profiles include this repo; GPU features are toggled by `VITE_PROFILE_TIER` at build time.
 
 ---
 

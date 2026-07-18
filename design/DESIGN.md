@@ -10,7 +10,7 @@
 | **Language · Framework** | TypeScript · React 18 + Vite + Ant Design (antd); component library reuse `ai-ui-kit` (see §6) |
 | **domain** | frontend (governance console: tenant/user/resource/quota/audit, corresponding to §14) |
 | **optional** | false (core, installed by default with starter/profile, see `openstrata-meta/profiles/*.yaml`) |
-| **Platform version** | v1.4.0 |
+| **Platform version** | v1.0.0 |
 | **Document Status** | Draft (draft) |
 | **Responsible Person** | OpenStrata Architecture Group |
 | **Affiliated links** | This repository [arch/ARCH.md](./../arch/ARCH.md) · [skills/SKILLS.md](./../skills/SKILLS.md) · [specs/SPECS.md](./../specs/SPECS.md); Architecture Document §14 (Management Portal), §8 (Multi-tenancy), §4.7.3 (Authentication and Authorization/RBAC), §15.5 (Java backend DDD, corresponding to `ai-admin-service`) |
@@ -211,7 +211,7 @@ The governance aspect presents quotas from two perspectives:
 - **Containerization**: multi-stage `Dockerfile` + `nginx:alpine`, `env` injects `VITE_ADMIN_API_BASE` / `VITE_KEYCLOAK_URL` (configuration external, §15.5 cloud native).
 - **K8s**: `helm/` (ingress + configmap + deployment), stateless and horizontally scalable.
 - **CI/CD (independent for each repository, §15.6.2)**: `.github/` = `lint → tsc → single test → build → Trivy scan → push image`; `ai-ui-kit` nailed version (from `bom.yaml`).
-- **Assembly with meta repository**: Boot portal/assembly engine press `repos.yaml` to pin `ai-admin-frontend@v1.4.0` to pull; all profiles (starter/standard/advanced/full) include this repository (see `openstrata-meta/profiles/*.yaml`).
+- **Assembly with meta repository**: Boot portal/assembly engine press `repos.yaml` to pin `ai-admin-frontend@v1.0.0` to pull; all profiles (starter/standard/advanced/full) include this repository (see `openstrata-meta/profiles/*.yaml`).
 
 ---
 
