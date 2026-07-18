@@ -1,7 +1,20 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import path from 'node:path';
 
+// NOTE: @openstrata/ai-ui-kit is not yet published. Resolve to the sibling
+// source for local verification. Remove before production use.
 export default defineConfig({
   plugins: [react()],
-  server: { port: 5173, proxy: { '/api': 'http://localhost:8080' } },
+  resolve: {
+    alias: {
+      '@openstrata/ai-ui-kit': path.resolve(__dirname, '../ai-ui-kit/src/index.ts'),
+    },
+  },
+  server: { port: 5174, proxy: { '/api': 'http://localhost:8081' } },
+  build: {
+    rollupOptions: {
+      external: ['mermaid'],
+    },
+  },
 });
