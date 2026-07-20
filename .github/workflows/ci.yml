@@ -1,6 +1,7 @@
 name: CI
 
 on:
+  workflow_dispatch:
   push:
     branches: [main, feat/**]
   pull_request:
@@ -10,11 +11,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Checkout ai-ui-kit (sibling)
+      - name: Checkout ai-ui-kit source
         uses: actions/checkout@v4
         with:
           repository: open-strata-ai/ai-ui-kit
-          path: ../ai-ui-kit
+          path: ai-ui-kit-src
+      - name: Link ai-ui-kit as sibling (vite alias expects ../ai-ui-kit)
+        run: ln -s "$GITHUB_WORKSPACE/ai-ui-kit-src" "$GITHUB_WORKSPACE/../ai-ui-kit"
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
