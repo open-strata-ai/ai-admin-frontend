@@ -1,11 +1,24 @@
 import { apiClient } from '../../infrastructure/apiClient';
+import type { TenantGovernanceView } from '../../domain/types';
 
 /** Admin governance client (ADR-0001/0003/0005). Talks to ai-admin-service
  *  real REST surface — every call hits the backend, nothing is mocked. */
 export const adminClient = {
-  /** GET /api/v1/admin/tenants → list of tenant ids. */
-  listTenants(): Promise<string[]> {
-    return apiClient.get<string[]>('/api/v1/admin/tenants');
+  /** GET /api/v1/admin/tenants → full tenant governance view (RC-10: real plan). */
+  listTenants(): Promise<TenantGovernanceView[]> {
+    return apiClient.get<TenantGovernanceView[]>('/api/v1/admin/tenants');
+  },
+
+  /** POST /api/v1/admin/tenants → create a tenant (RC-9 minimal CRUD). */
+  createTenant(req: { tenantId: string; packageTier: string }): Promise<TenantGovernanceView> {
+    return apiClient.post<TenantGovernanceView>('/api/v1/admin/tenants', req);
+  },
+
+  /** DELETE /api/v1/admin/tenants/{id} → remove a tenant (RC-9 minimal CRUD). */
+  deleteTenant(id: string): Promise<void> {
+    return apiClient.request<void>(`/api/v1/admin/tenants/${encodeURIComponent(id)}`, {
+      method: 'DELETE',
+    });
   },
 
   /** GET /api/v1/admin/global-resources → platform global resource view. */

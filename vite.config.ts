@@ -11,7 +11,7 @@ export default defineConfig({
       '@openstrata/ai-ui-kit': path.resolve(__dirname, '../ai-ui-kit/src/index.ts'),
     },
   },
-  server: { port: 5174, proxy: { '/api': 'http://localhost:8081' } },
+  server: { port: 5174, proxy: { '/api': 'http://localhost:8088' } },
   build: {
     rollupOptions: {
       external: ['mermaid'],

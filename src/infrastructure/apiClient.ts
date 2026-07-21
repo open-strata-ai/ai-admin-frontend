@@ -60,5 +60,5 @@ export class ApiClient {
   }
 }
 
-const baseUrl = import.meta.env.VITE_ADMIN_API_BASE ?? 'http://localhost:8081';
+const baseUrl = import.meta.env.VITE_ADMIN_API_BASE ?? 'http://localhost:8088';
 export const apiClient = new ApiClient(baseUrl);
