@@ -9,16 +9,22 @@ export interface TenantSummary {
   status: 'active' | 'paused' | 'created';
 }
 
-export type AuditAction = 'tenant.create' | 'tenant.quota' | 'user.invite' | 'component.toggle';
+/** Real tenant governance as returned by GET /api/v1/admin/tenants (RC-10). */
+export interface TenantGovernanceView {
+  id: string;
+  packageTier?: 'TRIAL' | 'STANDARD' | 'ENTERPRISE';
+}
+
+export type AuditAction = 'tenant.create' | 'tenant.quota' | 'user.invite' | 'component.toggle' | string;
 
 export interface AuditEntry {
-  id: string;
+  id: number;
   actor: string;
   action: AuditAction;
-  target: string;
+  scope?: string;
   tenantId: string;
-  at: number;
-  status: 'success' | 'failed';
+  at: string;
+  status?: 'success' | 'failed';
 }
 
 export interface GpuQuota {

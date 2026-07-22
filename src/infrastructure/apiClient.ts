@@ -60,5 +60,8 @@ export class ApiClient {
   }
 }
 
-const baseUrl = import.meta.env.VITE_ADMIN_API_BASE ?? 'http://localhost:8081';
+// VITE_ADMIN_API_BASE supplies the /api prefix (dev: Vite proxy '/api' -> :8088;
+// default falls back to the direct service URL including /api). Client paths then
+// start with /v1/admin/... so the final request is /api/v1/admin/... (no doubling).
+const baseUrl = import.meta.env.VITE_ADMIN_API_BASE ?? 'http://localhost:8088/api';
 export const apiClient = new ApiClient(baseUrl);
